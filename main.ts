@@ -94,9 +94,6 @@ sprites.onOverlap(SpriteKind.FollowEnemy, SpriteKind.Projectile, function (sprit
     music.pewPew.play()
     Jimmy_2.follow(BOB, 80)
 })
-sprites.onOverlap(SpriteKind.FollowEnemy, SpriteKind.Obstacle, function (sprite, otherSprite) {
-	
-})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     otherSprite.destroy()
     music.baDing.play()
@@ -120,15 +117,6 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.Food)
     tiles.placeOnRandomTile(Coin, sprites.dungeon.floorLight2)
-})
-sprites.onOverlap(SpriteKind.FollowEnemy, SpriteKind.Enemy, function (sprite, otherSprite) {
-	
-})
-sprites.onOverlap(SpriteKind.SpeedFollower, SpriteKind.Enemy, function (sprite, otherSprite) {
-	
-})
-sprites.onOverlap(SpriteKind.SpeedFollower, SpriteKind.Obstacle, function (sprite, otherSprite) {
-	
 })
 sprites.onOverlap(SpriteKind.FollowEnemy, SpriteKind.Player, function (sprite, otherSprite) {
     BOB.setVelocity(0, 0)
@@ -343,5 +331,5 @@ Jimmy_2 = sprites.create(img`
     . f 6 1 1 1 1 1 1 6 6 6 f . . . 
     . . c c c c c c c c c f . . . . 
     `, SpriteKind.FollowEnemy)
-Jimmy_2.follow(BOB, 50)
+Jimmy_2.follow(BOB, 60)
 Jimmy_2.setPosition(80, 5075)
